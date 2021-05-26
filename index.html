@@ -26,52 +26,50 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 600px;
-	height: 300px;
+	width: 40vw;
+	height: 20vw;
 
 }
 .box h2 {
 	color: #ffffff;
-	font-size: 5em;
+	font-size: 5vw;
 	font-weight: 600;
 	letter-spacing: 0.1em;
 	text-shadow:
-				0 0 10px #00ff00, 
-				0 0 20px #00ff00, 
-				0 0 40px #00ff00;
+				0 0 0.5vw #00ff00, 
+				0 0 1vw #00ff00, 
+				0 0 2vw #00ff00;
 	transition: all 2s ease;
 }
 .box h2:hover {
 	text-shadow:
-				0 0 10px #00ccff, 
-				0 0 20px #00ccff, 
-				0 0 40px #00ccff;
+				0 0 0.5vw #00ccff, 
+				0 0 1vw #00ccff, 
+				0 0 2vw #00ccff;
 }
 .lightbar {
 	position: absolute;
-	top: calc(50%-50px);
+	top: calc(50%-2.5vw);
 	left: 0;
-	width: 10px;
-	height: 100px;
+	width: 1vw;
+	height: 7vw;
 	border-radius: 10px;
 	background: #ffffff;
 	z-index: 2;
 	box-shadow:
-				0 0 10px #00ff00, 
-				0 0 20px #00ff00, 
-				0 0 40px #00ff00, 
-				0 0 80px #00ff00, 
-				0 0 120px #00ff00;
+				0 0 0.5vw #00ff00, 
+				0 0 1vw #00ff00, 
+				0 0 2vw #00ff00, 
+				0 0 4vw #00ff00;
 	transition: all 2s ease;
 	animation: lightbarAnimated 5s linear infinite;
 }
 h2:hover ~ .lightbar {
 	box-shadow:
-				0 0 10px #00ccff, 
-				0 0 20px #00ccff, 
-				0 0 40px #00ccff, 
-				0 0 80px #00ccff, 
-				0 0 120px #00ccff;
+				0 0 0.5vw #00ccff, 
+				0 0 1vw #00ccff, 
+				0 0 2vw #00ccff, 
+				0 0 4vw #00ccff;
 }
 .toplayer {
 	position: absolute;
@@ -93,11 +91,11 @@ h2:hover ~ .lightbar {
 		}
 		90%
 		{
-			transform: scaleY(1) translateX(calc(600px - 10px));
+			transform: scaleY(1) translateX(40vw);
 		}
 		95%, 100%
 		{
-			transform: scaleY(0) translateX(calc(600px - 10px));
+			transform: scaleY(0) translateX(40vw);
 		}		
 }
 
