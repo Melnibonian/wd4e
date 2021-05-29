@@ -97,7 +97,7 @@ svg.waves {
 	z-index: 1;
 }
 #bluring_effect #layer1 {
-	animation: eternal_rotation linear 120s infinite;
+	animation: eternal_rotation ease 120s infinite;
 }
 #bluring_effect #layer2 {
 	position: absolute;
@@ -119,7 +119,7 @@ svg.waves {
 	width: 100%;
 	height: auto;
 	opacity: 0.2;
-	animation: eternal_rotation_counter linear 120s infinite;
+	animation: eternal_rotation_counter ease 120s infinite;
 	z-index: -1;
 	transition: all 2s ease;
 }
@@ -148,7 +148,7 @@ svg.waves {
 	text-align: center;
 	background-color: rgba(255,255,255,0);
 	z-index: 10;
-	animation: eternal_rotation_counter linear 120s infinite;
+	animation: eternal_rotation_counter ease 120s infinite;
 	transition: all 2s ease;
 }
 #bluring_effect a {
