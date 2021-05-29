@@ -130,13 +130,13 @@ svg.waves {
 	width: 30vw;
 	height: auto;
 }
-#bluring_effect img#layer2_left {
+/* #bluring_effect img#layer2_left {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 30vw;
 	height: auto;
-}
+} */
 #bluring_effect #layer1 #layer1_anchor {
 	width: 100%;
 	height: 100%;
