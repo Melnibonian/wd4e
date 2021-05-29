@@ -103,10 +103,11 @@ svg.waves {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url("../images/layer2.jpg");
+/* 	background-image: url("../images/layer2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: bottom right;
+	background-position: bottom right; */
+	background-color: #FFDD00;
 	-webkit-transform: translateZ(0); 
 	transform: translateZ(0);
 }
@@ -126,7 +127,7 @@ svg.waves {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 30vw;
+	width: 40vw;
 	height: auto;
 }
 /* #bluring_effect img#layer2_left {
