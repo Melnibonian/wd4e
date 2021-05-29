@@ -75,14 +75,14 @@ svg.waves {
 	width: 100%;
 }
 /* Home Page Banner START */
-#bluring_effect {
+#main_parallax {
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
 	background-color: #000;
 	position: relative;
 }
-#bluring_effect #layer1 {
+#main_parallax #layer1 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -94,10 +94,10 @@ svg.waves {
 	border-radius: 50%;
 	z-index: 1;
 }
-#bluring_effect #layer1 {
+#main_parallax #layer1 {
 	animation: eternal_rotation linear 120s infinite;
 }
-#bluring_effect #layer2 {
+#main_parallax #layer2 {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -107,11 +107,13 @@ svg.waves {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom right; */
-	background-color: #FFDD00;
+	background-color: #ffdd00;
+	background: -webkit-linear-gradient(to left, #ffb703, #fb8500);
+	background-image: linear-gradient(to left, #ffb703, #fb8500);
 	-webkit-transform: translateZ(0); 
 	transform: translateZ(0);
 }
-#bluring_effect img#shutter {
+#main_parallax img#shutter {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -123,21 +125,21 @@ svg.waves {
 	opacity: 0.2;
 	transition: all 2s ease;
 }
-#bluring_effect img#layer2_right {
+#main_parallax img#layer2_right {
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	width: 40vw;
 	height: auto;
 }
-/* #bluring_effect img#layer2_left {
+/* #main_parallax img#layer2_left {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	width: 30vw;
 	height: auto;
 } */
-#bluring_effect #layer1 #layer1_anchor {
+#main_parallax #layer1 #layer1_anchor {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
@@ -151,30 +153,30 @@ svg.waves {
 	animation: eternal_rotation_counter linear 120s infinite;
 	transition: all 2s ease;
 }
-#bluring_effect a {
+#main_parallax a {
 	text-decoration: none;
 	color: #cccccc;
 	text-shadow: 0 0 1px rgba(255,255,255,0), 0 0 2px rgba(255,255,255,0), 0 0 6px rgba(255,255,255,0);
 	font-size: 3vw;
 }
-#bluring_effect a span {
+#main_parallax a span {
 	font-size: 0.5em;
 	opacity: 0.8;
 }
 @media (max-width: 775px) {
-	#bluring_effect #layer1, #bluring_effect img#shutter {
+	#main_parallax #layer1, #main_parallax img#shutter {
 	width: 80vw;
 	height: 80vw;
 	}
-	#bluring_effect #layer1 a {
+	#main_parallax #layer1 a {
 		font-size: 5vw;
 	}
 }
-#bluring_effect img#shutter:hover {
+#main_parallax img#shutter:hover {
 	opacity: 0.9;
 	/* filter: invert(100%); */
 }
-#bluring_effect img#shutter:hover ~ #layer1 #layer1_anchor {
+#main_parallax img#shutter:hover ~ #layer1 #layer1_anchor {
 	background-color: rgba(0,0,0,0.2);
 	color: #ffffff;
 	text-shadow: 0 0 1px #000000, 0 0 2px #000000, 0 0 3px #000000;
