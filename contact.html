@@ -15,7 +15,7 @@
             
     <title>My Portfolio</title>
 </head>
-<body>
+<body id="contact_page">
 
     <div class="container-fluid" style="flex: 1; padding: 0;">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top menou">
@@ -48,8 +48,195 @@
             </div>
         </nav>
 
+        <main class="main_content">
+            <h1 class="h4 text-center pb-3">Find me on the map</h1>
+            <div class="row">
+                <div class="col-12 map_container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52058.51115444698!2d24.46026676750774!3d35.364159048825364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149b7516824c5817%3A0xe90c1cd46d76dcf3!2sRethimno%20741%2000!5e0!3m2!1sen!2sgr!4v1622322028783!5m2!1sen!2sgr"  allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
 
+                    </div>
+                    <div class="col-md-6 form_container">
+                        <h2 class="h4 text-center">Contact form</h2>
+                        <p class="text-muted text-center pb-3">Fill in the form to convey your message</p>
+                        <form>
+                            <div class="form-group">
+                                <label for="your_name">Name</label>
+                                <input type="text" class="form-control" id="your_name" placeholder="Enter your name">
+                                <small id="your_name_message" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_email">Email</label>
+                                <input type="email" class="form-control" id="your_email" placeholder="Enter your email address">
+                                <small id="your_email_message" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_phone">Phone number</label>
+                                <input type="text" class="form-control" id="your_phone" placeholder="Enter your phone number">
+                                <small id="your_phone_message" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_message">Message</label>
+                                <textarea class="form-control" id="your_message" rows="3" placeholder="Enter your message here"></textarea>
+                                <small id="your_message_message" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="project_type">Interested in</label>
+                                <select id="project_type" class="form-control">
+                                    <option selected>Front End Web Development</option>
+                                    <option>Back End Web Development</option>
+                                    <option>UX Design</option>
+                                </select>
+                                <small id="project_type_message" class="form-text text-danger"></small>
+                            </div><br />
+                            <button type="submit" class="btn btn-dark" id="contact_form">Submit</button>
+                            <p id="success_message" class="form-text text-success"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="page_footer font-small dark pt-4 ">
+
+            <!-- Footer Links -->
+            <div class="container-fluid">
+          
+              <!-- Grid row -->
+              <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3 infoFooter">
+                    <h5>My Brand Name</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="my-projects/front-end.html">Front End Web Design</a></li>
+                        <li><a href="my-projects/back-end.html">Back End Web Design</a></li>
+                        <li><a href="my-projects/UX-design.html">UX Design</a></li>                       
+                    </ul>
+                    <img src="assets/images/logo_light.png" alt="Light logo" >
+                </div>
+                <!-- Grid column -->
+                <div class="col-md-3 mt-md-0 mt-3 text-left epikoinoniaFooter">
+          
+                      <!-- Content -->
+                <h5>Contact Information</h5>
+                    
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="fas fa-mobile-alt"></span></div>
+                        <div class="col-11"><strong>Mobile: </strong><a href="tel:9876543210">9876543210</a></div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="fas fa-phone-alt"></span></div>
+                        <div class="col-11"><strong>Land Line: </strong><a href="tel:0123456789">0123456789</a></div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="far fa-envelope-open"></span></div>
+                        <div class="col-11"><strong>E-mail: </strong><a href="mailto:some@mail.mail">some@mail.mail</a></div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="fas fa-map-marker-alt"></span></div>
+                        <div class="col-11"><strong>Address: </strong>Crete, Greece, 74100</div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="far fa-clock"></span></div>
+                        <div class="col-11"><strong>Work Hours: </strong><br />Monday to Friday: 09:00-17:00</div>
+                    </div>
+                    
+                </div>
+                <!-- Grid column -->
+          
+                <hr class="clearfix w-100 d-md-none pb-3">
+                
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+          
+                  <!-- Links -->
+                  <h5>Useful Links</h5>
+          
+                  <ul class="list-unstyled" id="useful_links">
+                    <li>
+                        <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a>
+                    </li>
+                    <li>
+                    <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>
+                    </li>
+                    <li>
+                        <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Tool</a>
+                    </li> 
+                    <li>
+                        <a href="https://validator.w3.org/" target="_blank">W3C HTML Validation Tool</a>
+                    </li> 
+                    <li>
+                      <a href="https://wave.webaim.org/" target="_blank">Wave-Web Accessibility Evaluation Tool</a>
+                    </li>                
+                  </ul>
+          
+                </div>
+                <!-- Grid column -->
+          
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+          
+                  <!-- Links -->
+                  <h5>Social Media</h5>
+          
+                  <ul class="list-unstyled socialMedia">
+                    <li>
+                        <a href="#" aria-label="facebook" target="_blank" onclick="return false;">
+                            <span class="fab fa-facebook-f faSocial" title="Facebook"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="twitter" target="_blank" onclick="return false;">
+                            <span class="fab fa-twitter faSocial" title="Twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="instagram" target="_blank" onclick="return false;">
+                            <span class="fab fa-instagram faSocial" title="Instagram"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="linkedin" target="_blank" onclick="return false;">
+                         <span class="fab fa-linkedin-in" title="Linkedin"></span>
+                        </a>
+                    </li>
+                    <li>
+                         <a href="#" aria-label="youtube" target="_blank" onclick="return false;">
+                            <span class="fab fa-youtube" title="Linkedin"></span>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Grid column -->
+          
+              </div>
+              <!-- Grid row -->
+          
+            </div>
+            <!-- Footer Links -->
+          
+            <!-- Copyright -->
+            <div class="footer-copyright text-center"> 
+              
+                © 2021 My Brand Name - All rights reserved<br>
+                <span id="designerCopyright">Designed by:
+                <a href="#">
+                  <img src="assets/images/logo_light.png" alt="Light logo"> My Brand Name <img src="assets/images/logo_light.png" alt="Light logo">
+                </a>
+              </span>
+            </div>
+            <!-- Copyright -->
+          
+          </footer>
     </div>
-
+    
+    <script src="assets/js/custom_scripts.js"></script>
 </body>
 </html>

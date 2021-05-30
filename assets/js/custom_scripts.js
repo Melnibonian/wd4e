@@ -3,6 +3,7 @@ $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })
 
+// Main Page Parallax
 
 function parallax_with_grayscale (id,multiplier) {
 	if ( document.getElementById(id) !== null) {
@@ -19,80 +20,85 @@ function parallax_with_grayscale (id,multiplier) {
 		console.log('You tried to create parallax grayscale effect on element with id='+id+', which doesn\'t exist!');
 	}
 }
-// Main Page Parallax
 
-/* 	if ( document.getElementById("layer2") !== null) {
-		let layer2=document.getElementById("layer2");
-				
-		window.addEventListener('scroll', function(){
-			var value = window.pageYOffset;
-			
-			layer2.style.transform = `translateY(${value * -0.17}px)`;
-			layer2.style.filter = `grayscale(${value * 0.17}%)`;
-		})
-	}
- */
-// Main Page Easter Egg
-	if ( document.getElementById("easterEgg") !== null && document.getElementById("tree") !== null) {
-		document.getElementById("easterEgg").ondblclick = function() {mouseOver()};
-		document.getElementById("easterEgg").onclick = function() {mouseOut()};
-
-		function mouseOver() {
-			document.getElementById("tree").style.opacity = "1";
-			document.getElementById("tree").style.transition = 'opacity 8s ease';
+// Main Page Click Effects
+	$("#main_anchor").click(function(event) {
+		event.preventDefault();
+		$("#layer2_right_1").delay(1000).fadeToggle(2000);
+		$("#layer2_right_2").delay(1000).fadeToggle(2000);
+		window.setTimeout(function() {
+			$('#main_parallax #layer2').toggleClass('red-bg');
+		}, 1000);
+	});
+// Contact Form Validation
+function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+if (document.getElementById("contact_form") !== null ){
+	document.getElementById("contact_form").addEventListener("click", contact_form_validation);
+	function contact_form_validation(event) {
+		var your_name = document.getElementById("your_name").value;
+		var your_email = document.getElementById("your_email").value;
+		var your_phone = document.getElementById("your_phone").value;
+		var your_message = document.getElementById("your_message").value;
+		var project_type = document.getElementById("project_type").value;
+		var your_name_message = document.getElementById("your_name_message");
+		var your_email_message = document.getElementById("your_email_message");
+		var your_phone_message = document.getElementById("your_phone_message");
+		var your_message_message = document.getElementById("your_message_message");
+		var project_type_message = document.getElementById("project_type_message");
+		your_name_message.innerHTML = '';
+		your_email_message.innerHTML = '';
+		your_phone_message.innerHTML = '';
+		your_message_message.innerHTML = '';
+		if (your_name == "") {
+			your_name_message.innerHTML = "Required field";
 		}
-
-		function mouseOut() {
-			document.getElementById("tree").style.opacity = "0";
+		else {
+			your_name_message.innerHTML = "<span class='text-success'>&#10003;</span>";
+			var your_name_success = true;
+		}
+		if (your_email == "") {
+			your_email_message.innerHTML = "Required field";
+		}
+		else if (!validateEmail(your_email)) {
+			your_email_message.innerHTML = "Please insert a valid email";
+		}
+		else {
+			your_email_message.innerHTML = "<span class='text-success'>&#10003;</span>";
+			var your_email_success = true;
+		}
+		if (your_phone == "") {
+			your_phone_message.innerHTML = "Required field";
+		}
+		else if (isNaN(your_phone)) {
+			your_phone_message.innerHTML = "Please insert a valid phone number";
+		}
+		else if (your_phone.length !== 10) {
+			your_phone_message.innerHTML = "Please insert a 10 digit phone number";
+		}
+		else {
+			your_phone_message.innerHTML = "<span class='text-success'>&#10003;</span>";
+			var your_phone_success = true;
+		}
+		if (your_message == "") {
+			your_message_message.innerHTML = "Required field";
+		}
+		else {
+			your_message_message.innerHTML = "<span class='text-success'>&#10003;</span>";
+			var your_message_success = true;
+		}
+		if (!(your_name_success === true && your_email_success === true && 
+			your_phone_success === true && your_message_success === true)) {
+			event.preventDefault();
+		}
+		else {
+			/* setTimeout(function(){ 
+				document.getElementById['success_message'].innerHTML = 'Your message has been sent successfully!';
+			}, 3000); */
+			alert('Your message has been sent successfully!');
 		}
 	}
-
-// ParallaxZoom
-	if ( document.getElementById("parallaxZoom") !== null) {
-		let parallaxZoom=document.getElementById("parallaxZoom");
-		let parallaxZoom_height = parallaxZoom.offsetHeight;
-				
-		window.addEventListener('scroll', function(){
-			var verticalMove = window.pageYOffset;
-			var zoomIn = 1 + (verticalMove / (4*parallaxZoom_height / 1.001)) ;
-			
-			parallaxZoom.style.transform = `translateY(${verticalMove * 0.3}px) scale(${zoomIn})`;
-		})
-	}
-    
-// ParallaxPlain
-
-	if ( document.getElementById("parallaxPlain") !== null) {
-		let parallaxPlain=document.getElementById("parallaxPlain");
-		let parallaxPlain_height = parallaxPlain.offsetHeight;
-				
-		window.addEventListener('scroll', function(){
-			var verticalMove = window.pageYOffset;
-			
-			parallaxPlain.style.transform = `translateY(${verticalMove * 0.3}px)`;
-		})
-	}
-
-// Parallax About Us
-
-	if ( document.getElementById("parallaxAbout") !== null) {
-		let parallaxAbout=document.getElementById("parallaxAbout");
-		let parallaxAbout_height = parallaxAbout.offsetHeight;
-		let jigsawPieceHope=document.getElementById("jigsawPieceHope");
-		let jigsawPieceHope_height = jigsawPieceHope.offsetHeight;
-		let jigsawPieceBlack=document.getElementById("jigsawPieceBlack");
-		let jigsawPieceBlack_height = jigsawPieceBlack.offsetHeight;
-				
-		window.addEventListener('scroll', function(){
-			var verticalMove = window.pageYOffset;
-			var oneToZero = 1 - (verticalMove / (0.7*parallaxAbout_height / 1.001));
-			var zeroToOne = verticalMove / (0.3*jigsawPieceHope_height / 1.001);
-
-			parallaxAbout.style.transform = `translateY(${verticalMove * 0.3}px)`;
-			parallaxAbout.style.filter = `grayscale(${oneToZero*0.9})`;
-			jigsawPieceHope.style.transform = `translateY(${verticalMove * -0.3}px)`;
-			jigsawPieceHope.style.opacity = zeroToOne;
-			jigsawPieceBlack.style.transform = `translateY(${verticalMove * 0.9}px)`;
-			jigsawPieceBlack.style.opacity = oneToZero;
-		})
-	}
+}
