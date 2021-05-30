@@ -396,7 +396,8 @@ footer.page_footer h5 {
 }
 #contact_page .contact_info_container, #contact_page .social_media_container {
 	padding: 2em;
-	background: rgba(0,0,0,0.75);
+	background-color: rgba(0,0,0,0.75);
+	color: #ffffff;
 }
 #contact_page .social_media_container ul.socialMedia {
 	display: flex;
