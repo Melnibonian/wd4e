@@ -15,6 +15,9 @@ Yellows: #ffdd00
 	box-sizing: border-box;
 	max-width: 100vw;
 }
+a, a:hover {
+	text-decoration: none;
+}
 body {
 	background-color: var(--light);
 	max-width: 100vw;
@@ -278,11 +281,11 @@ footer.page_footer h5 {
 }
 .socialMedia .fab {
 	font-size: 20px;
-	width: 40px;
-	height: 40px;
+	width: 2em;
+	height: 2em;
 	border-radius: 50%;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 0.5em;
 }
 .socialMedia2 li {
 	display: inline-block;
@@ -355,26 +358,58 @@ footer.page_footer h5 {
 }
 /* Footer END*/
 /* Contact Page START*/
-body#contact_page {
+#contact_page {
 	background-image: url("../images/pattern_shapes.png");
 	background-repeat: repeat;
 	background-size: auto;
 	background-position: bottom;
 }
-body#contact_page .main_content {
-	background-color: rgba(255,255,255,0);	
+#contact_page .main_content {
+	padding-top: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
-body#contact_page .form_container {
-	border-left: 1px solid #cccccc;
-	margin-top: 3em;
-}
-body#contact_page .map_container {
+#contact_page .map_container {
 	padding-right: 0;
+	background-color: #a7cdf2;
 }
-body#contact_page .map_container iframe {
+#contact_page .map_container iframe {
 	width: 100%;
 	height: 100vh;
 	border: none;
+}
+/* #contact_page .contact_info_container:before {
+	content: '';
+	position: absolute;
+    left: 0;
+    top: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/pattern_shapes.png");
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: bottom;
+	filter: invert(50%);
+} */
+#contact_page .contact_info_container .col-md-6 {
+	padding: 1em;
+}
+#contact_page .contact_info_container, #contact_page .social_media_container {
+	padding: 2em;
+	background: rgba(0,0,0,0.75);
+}
+#contact_page .social_media_container ul.socialMedia {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+#contact_page .social_media_container ul.socialMedia li {
+    margin-right: 0;
+    margin-bottom: 1.3em;
+}
+#contact_page .social_media_container ul.socialMedia .fab {
+	font-size: 40px;
 }
 /* Media Queries START */
 /* Home Page Banner  */
