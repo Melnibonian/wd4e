@@ -2,6 +2,10 @@
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })
+$('a[href="#"]').click(function(event) {
+	event.preventDefault();
+})
+
 
 // Main Page Parallax
 

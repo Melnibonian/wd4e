@@ -329,6 +329,9 @@ svg.waves {
 		border-top: 3px solid #cccccc;
 		background-color: #ffffff;
 	}
+	.certification_container .col-md-6.col-lg-3 {
+		padding: 2em;
+	}
 	.certification_container .certification_box {
 		background-image: url("../images/certificates/certificate_hopkins.jpg");
 		background-repeat: no-repeat;
@@ -368,9 +371,6 @@ svg.waves {
 	}
 	.certification_container .certification_box:hover {
 		filter: invert(100%);
-	}
-	.certification_container .col-md-6.col-lg-3 {
-		padding: 2em;
 	}
 	#filters {
 		margin-bottom: 2em;
