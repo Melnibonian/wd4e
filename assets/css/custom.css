@@ -383,12 +383,13 @@ svg.waves {
 		display: block;
 		padding: 0.3em 0.6em;		
 		text-decoration:none;
-		color:#666;
+		color:#666666;
 		cursor: pointer;
+		border-radius: 0.2em;
 	}
 	
 	#filters li span.active {
-		background: #e95a44;
+		background: #666666;
 		color:#fff;
 	}
 	#portfoliolist .portfolio {
@@ -405,6 +406,12 @@ footer.page_footer {
 	padding-top: 1em !important;
 	padding-bottom: 1em;
 	color: var(--light);
+}
+footer.page_footer {
+	font-size: 0.9rem;
+}
+footer.page_footer strong {
+	font-weight: 400;
 }
 footer.page_footer h5 {
 	margin-top: 0.6em;
@@ -435,10 +442,10 @@ footer.page_footer a:hover {
 footer.page_footer h5 {
 	text-align: left;
 }
-.epikoinoniaFooter {
+/* .epikoinoniaFooter {
 	font-size: 14px;
 }
-/* .epikoinoniaFooter h5 {
+.epikoinoniaFooter h5 {
 	margin-left: 9%;
 } */
 .epikoinoniaFooter .fas, .footer-copyright .far {
