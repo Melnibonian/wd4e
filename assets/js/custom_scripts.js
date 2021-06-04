@@ -22,14 +22,42 @@ function parallax_with_grayscale (id,multiplier) {
 }
 
 // Main Page Click Effects
-	$("#main_anchor").click(function(event) {
+	$("#custom_next").click(function(event) {
 		event.preventDefault();
 		$("#layer2_right_1").delay(1000).fadeToggle(2000);
-		$("#layer2_right_2").delay(1000).fadeToggle(2000);
-		window.setTimeout(function() {
+		$("#layer2_left_1").delay(1000).fadeToggle(2000);
+		if($("#layer2_left_1").is(":hidden")) {
+			$('#main_parallax #layer2').css('background-color', '#ffb703');
+		}
+		else {
+			$('#main_parallax #layer2').css('background-color', '#f48c06');
+		}
+		/* window.stop(true).setTimeout(function() {
 			$('#main_parallax #layer2').toggleClass('red-bg');
-		}, 1000);
+		}, 1000); */
 	});
+	$("#custom_previous").click(function(event) {
+		event.preventDefault();
+		$("#layer2_right_1").delay(1000).fadeToggle(2000);
+		$("#layer2_left_1").delay(1000).fadeToggle(2000);
+		if($("#layer2_left_1").is(":hidden")) {
+			$('#main_parallax #layer2').css('background-color', '#ffb703');
+		}
+		else {
+			$('#main_parallax #layer2').css('background-color', '#f48c06');
+		}
+	});
+	/* $(document).on('keydown',function(e) {
+		if(e.which == 37 || e.which == 39) {
+			e.preventDefault();
+			$("#layer2_right_1").delay(1000).fadeToggle(2000);
+			$("#layer2_right_2").delay(1000).fadeToggle(2000);
+			window.setTimeout(function() {
+				$('#main_parallax #layer2').toggleClass('red-bg');
+			}, 1000);
+		}
+	}); */
+	
 // Contact Form Validation
 function validateEmail(email) 
     {

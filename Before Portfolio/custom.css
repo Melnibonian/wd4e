@@ -287,6 +287,9 @@ svg.waves {
 		padding-top: 0;
 	}
 	#about_me_page .personal_info_container #personal_photo {
+		/* height: 100%;
+		width: auto;
+		object-fit: cover; */
 		background-image: url("../images/personal_image.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -327,7 +330,6 @@ svg.waves {
 	.certification_container {
 		min-height: 100vh;
 		border-top: 3px solid #cccccc;
-		background-color: #ffffff;
 	}
 	.certification_container .certification_box {
 		background-image: url("../images/certificates/certificate_hopkins.jpg");
@@ -340,7 +342,6 @@ svg.waves {
 		align-items: flex-end;
 		overflow: hidden;
 		border-radius: 5px;
-		/* transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1); */
 		transition: all 1s ease;
 	}
 	.certification_container .certification_box h2 {
@@ -350,6 +351,10 @@ svg.waves {
 		background: rgba(0,0,0,0.8);
 		color: #ffffff;
 		transform: translate(0,0);
+		transition: all 1s ease;
+	}
+	.certification_container .certification_box:hover h2 {
+		
 	}
 	.certification_container .certification_box.calarts {
 		background-image: url("../images/certificates/certificate_calarts.jpg");
@@ -371,29 +376,6 @@ svg.waves {
 	}
 	.certification_container .col-md-6.col-lg-3 {
 		padding: 2em;
-	}
-	#filters {
-		margin-bottom: 2em;
-		padding:0;
-		list-style:none;
-		display: flex;
-		justify-content: center;
-	}
-	#filters li span {
-		display: block;
-		padding: 0.3em 0.6em;		
-		text-decoration:none;
-		color:#666;
-		cursor: pointer;
-	}
-	
-	#filters li span.active {
-		background: #e95a44;
-		color:#fff;
-	}
-	#portfoliolist .portfolio {
-		display:none;
-		overflow:hidden;
 	}
 /* About Me END */
 /* Footer START */
@@ -438,9 +420,9 @@ footer.page_footer h5 {
 .epikoinoniaFooter {
 	font-size: 14px;
 }
-/* .epikoinoniaFooter h5 {
-	margin-left: 9%;
-} */
+.epikoinoniaFooter h5 {
+	/* margin-left: 9%; */
+}
 .epikoinoniaFooter .fas, .footer-copyright .far {
 	font-size: 1.1em;
 }
@@ -685,9 +667,6 @@ footer.page_footer h5 {
 	}
 	.certification_container .certification_box {
 		height: calc(100vw - 4em);
-	}
-	#filters li span {
-		font-size: 0.8rem;
 	}
 }
 @media (min-width: 992px) {

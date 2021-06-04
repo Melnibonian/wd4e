@@ -22,7 +22,7 @@
         }
     </style>
 </head>
-<body>
+<body id="main_page">
     
     <div class="container-fluid" style="flex: 1; padding: 0;">
         <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top menou">
@@ -57,7 +57,7 @@
         </nav>
         <main class="main_content">
             <section id="main_parallax">
-                <a href="#" id="main_anchor" title="Web Design">
+                <a href="#projects_section" id="main_anchor" title="Web Design">
                     <img src="assets/images/shutter.png" id="shutter" alt="shutter">
                     <div id="layer1">
                         <div id="layer1_anchor"><h1>Web Design<br /> 
@@ -67,8 +67,10 @@
                 </a>
                 <div id="layer2">
                     <img src="assets/images/layer2_right_1.png" class="layer2_right" id="layer2_right_1" alt="Samurai">
-                    <img src="assets/images/layer2_right_2.png" class="layer2_right" id="layer2_right_2" alt="Castle">
+                    <img src="assets/images/layer2_left_1.png" class="layer2_left" id="layer2_left_1" alt="Samurai 2">
                 </div>
+                <a href="#" id="custom_previous" title="Previous"><div class="custom_previous"></div></a>
+                <a href="#" id="custom_next" title="next"><div class="custom_next"></div></a>
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="waves">
                     <path fill="#ffffff" fill-opacity="0.8" d="M0,160L48,160C96,160,192,160,288,181.3C384,203,480,245,576,
                         266.7C672,288,768,288,864,272C960,256,1056,224,1152,208C1248,192,1344,192,1392,192L1440,192L1440,
@@ -77,7 +79,50 @@
                     </path>
                 </svg> -->
             </section>
-            <section style="height: 100vh">
+            <section id="projects_section" style="min-height: 100vh;">
+                <h1 class="h4 text-center pt-5">My Projects</h1>
+                <p class="text-center text-muted pb-3">Select a category</p>
+                <div class="row p-0 m-0 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="m-3 m-lg-1">
+                            <a href="my-projects/front-end.html">
+                                <div class="image">
+                                    <img class="img-fluid" src="assets/images/front_end.jpg" alt="UX Design">
+                                </div>
+                                <div class="text-center p-3 desciption">
+                                    <h2 class="h5">Front End Development</h2>
+                                    <p>Explore my work</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="m-3 m-lg-1">
+                            <a href="my-projects/back-end.html">
+                                <div class="image">
+                                    <img class="img-fluid" src="assets/images/back_end.jpg" alt="UX Design">
+                                </div>
+                                <div class="text-center p-3 desciption">
+                                    <h2 class="h5">Back End Development</h2>
+                                    <p>Explore my work</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="m-3 m-lg-1">
+                            <a href="my-projects/UX-design.html">
+                                <div class="image">
+                                    <img class="img-fluid" src="assets/images/UX.jpg" alt="UX Design">
+                                </div>
+                                <div class="text-center p-3 desciption">
+                                    <h2 class="h5">UX Design</h2>
+                                    <p>Explore my work</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="page_footer font-small dark pt-4 ">
@@ -213,7 +258,7 @@
             </div>
             <!-- Copyright -->
           
-          </footer>
+        </footer>
     </div>
 
 
