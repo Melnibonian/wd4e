@@ -1,0 +1,411 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/images/logo_dark_small.png" type = "image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../assets/libraries/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../assets/libraries/fontawesome/css/all.css" type='text/css' media='all'>
+    <link rel="stylesheet" href="../../assets/css/custom.css" type='text/css' media='all'>
+    <script src="../../assets/libraries/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="../../assets/libraries/bootstrap/js/bootstrap.js"></script>
+            
+    <title>Creative 3D Flip Menu</title>
+
+    <style type="text/css">
+        body {
+            background: #0b0c0e;
+        } 
+        .navbar3D {
+            position: absolute;
+            top: 70px;
+            left: 0;
+            background-color: rgba(0,0,0,0.01);
+            width: 100%;
+            height: calc(100vh - 70px);
+            }
+
+        .koumpia {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            padding-right: 10px;
+            padding-top: 10px;
+            }
+
+        .koumpi3D {
+            position: relative;
+            margin-top: 0px;
+            margin-right: 1px;
+            width: 90px;
+            height: 60px;
+        }
+
+        .side {
+            position: absolute;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            font-size: 1em;
+            font-weight: 900;
+            font-family: 'MV Boli';
+            text-decoration:none;
+            color: #ffffff;
+            background-color: rgb(11, 12, 14);
+            padding: 5px;
+            box-shadow: -2px -2px 2px rgba(255,255,255,0.1),
+                        3px 3px 6px rgba(0,0,0,0.9);
+        }
+
+        .hover-side {
+            opacity: 0;
+        }
+
+        .fas {
+            font-size: 1.6em;
+        }
+
+        .navbar3D video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .koumpia .side video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* mouse over link */
+        .koumpia a:hover:nth-child(1) .side {
+            color: #ffe033;
+            text-shadow: 3px 3px 2px black, 0 0 1em #ffe033;
+        }
+        .koumpia a:hover:nth-child(2) .side {
+            color: #00ff00;
+            text-shadow: 3px 3px 2px black, 0 0 1em #00ff00;
+        }
+        .koumpia a:hover:nth-child(3) .side {
+            color: #ff9900;
+            text-shadow: 3px 3px 2px black, 0 0 1em #ff9900;
+        }
+        .koumpia a:hover:nth-child(4) .side {
+            color: #66d9ff;
+            text-shadow: 3px 3px 2px black, 0 0 1em #66d9ff;
+        }
+        .koumpia a:hover:nth-child(5) .side {
+            color: #ff3333;
+            text-shadow: 3px 3px 2px black, 0 0 1em #ff3333;
+        }
+        .koumpia a:hover:nth-child(6) .side {
+            color: #8533ff;
+            text-shadow: 3px 3px 2px black, 0 0 1em #8533ff;
+        }
+
+        .koumpia a:focus {
+            outline: none;
+        }
+        .koumpia a:focus .side {
+            text-decoration:none;
+            color:  rgb(255, 215, 0);
+            background-color: rgb(56, 61, 71);
+        }
+        .koumpia a:link .side {
+            text-decoration:none;
+        }
+        /* visited link */
+        .koumpia a:visited .side {
+            text-decoration:none;
+        }
+        /* mouse over link */
+        .koumpia a:hover .side {
+            text-decoration:none;
+            background-color: rgba(0,0,0,0.8);
+        }
+        /* selected link */
+        .koumpia a:active .side {
+            text-decoration:none;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        @media(max-width: 600px){
+            
+            .koumpia {
+                flex-direction: column;
+                float: left;
+                padding-top: 10px;
+            }
+            main.main_content .col-12 {
+            padding-left: 95px;
+            margin-top: 0;
+            }
+        }
+        main.main_content .col-12 {
+            background: rgba(0,0,0,0.7);
+            margin-top: 33px;
+        }
+        /* 3D Support Clause  START */
+        @supports (transform: rotateX(90deg)) and (transform: translateY(45px)) and (transform: translateZ(-45px)) and (transform-style: preserve-3d) {
+
+            .hover-side {
+                opacity: 1;
+            }
+
+            .koumpi3D {
+                transform-style: preserve-3d;
+                transition: transform 0.5s ease-in-out;
+                transform: translateZ(-45px);
+            }
+
+            .koumpi3D:hover {
+                transform: rotateX(-90deg) translateY(45px);
+            }
+
+            .koumpi3D .default-side {
+                transform: translateZ(30px);
+            }
+
+            .koumpi3D .hover-side {
+                transform: rotateX(90deg) translateZ(30px); 
+            }
+
+            }
+/* 3D Support Clause  END */
+    </style>
+</head>
+<body class="front_end_project_page">
+
+    <div class="container-fluid" style="flex: 1; padding: 0;">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top menou">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../assets/images/logo_light.png" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">Toggle Menu</span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../about-me.html">About Me</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">My Projects</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item active" href="../front-end.html">Front End Web Development</a>
+                                <a class="dropdown-item" href="../back-end.html">Back End Web Development</a>
+                                <a class="dropdown-item" href="../UX-design.html">UX Design</a>
+                            </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../contact.html">Contact</a>
+                    </li>	 
+                </ul>
+            </div>
+        </nav>
+        <main class="main_content">
+            <div class="col-12">
+                <h1 class="h4 text-center text-white">Creative 3D Flip Menu</h1>
+                <p class="text-light text-center pb-3 custom_subtitle_light">Pure CSS styling &amp; hover effects
+                    <small>(Custom menu with pseudo-3D flipping effect on hover, hovering last menu item shows a video 
+                        and vertical alignment of the menu on mobile view. Using <span class="text-danger">@supports</span> CSS at-rule, we apply flipping
+                        animation only in broswers supporting the required CSS rules)
+                    </small>
+                </p>
+            </div>
+            <div class="row p-0 m-0 justify-content-center align-items-center">
+                <div class="navbar3D"><video src="../../assets/videos/flower.mp4" autoplay="" muted="" loop="loop"></video>
+                    <div class="koumpia">
+                        <a href="#"><div class="koumpi3D">
+                            <div class="side default-side">Home</div>
+                            <div class="side hover-side"><span class="fas fa-home"></span></div>
+                        </div></a>
+                    
+                        <a href="#"><div class="koumpi3D">
+                            <div class="side default-side">About Us</div>
+                            <div class="side hover-side"><span class="fas fa-users"></span></div>
+                        </div></a>
+                    
+                        <a href="#"><div class="koumpi3D">
+                            <div class="side default-side">Work Samples</div>
+                            <div class="side hover-side"><span class="fas fa-palette"></span></div>
+                        </div></a>
+                    
+                        <a href="#"><div class="koumpi3D">
+                            <div class="side default-side">Blog</div>
+                            <div class="side hover-side"><span class="fas fa-blog"></span></div>
+                        </div></a>
+                    
+                        <a href="#"><div class="koumpi3D">
+                            <div class="side default-side">Contact</div>
+                            <div class="side hover-side"><span class="fas fa-broadcast-tower"></span></div>
+                        </div></a>
+                    
+                        <a href="#"><div class="koumpi3D">
+                            <div class="side default-side">Video</div>
+                            <div class="side hover-side"><video src="../../assets/videos/flower.mp4" autoplay="" muted="" loop="loop"></video></div>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page_footer font-small dark pt-4 ">
+
+            <!-- Footer Links -->
+            <div class="container-fluid">
+          
+              <!-- Grid row -->
+              <div class="row">
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3 infoFooter">
+                    <h5>My Brand Name</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="../front-end.html">Front End Web Design</a></li>
+                        <li><a href="../back-end.html">Back End Web Design</a></li>
+                        <li><a href="../UX-design.html">UX Design</a></li>                       
+                    </ul>
+                    <img src="../../assets/images/logo_light.png" alt="Light logo" >
+                </div>
+                <!-- Grid column -->
+                <div class="col-md-3 mt-md-0 mt-3 text-left epikoinoniaFooter">
+          
+                      <!-- Content -->
+                <h5>Contact Information</h5>
+                    
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="fas fa-mobile-alt"></span></div>
+                        <div class="col-11"><strong>Mobile: </strong><a href="tel:9876543210">9876543210</a></div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="fas fa-phone-alt"></span></div>
+                        <div class="col-11"><strong>Land Line: </strong><a href="tel:0123456789">0123456789</a></div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="far fa-envelope-open"></span></div>
+                        <div class="col-11"><strong>E-mail: </strong><a href="mailto:some@mail.mail">some@mail.mail</a></div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="fas fa-map-marker-alt"></span></div>
+                        <div class="col-11"><strong>Address: </strong>Crete, Greece, 74100</div>
+                    </div>
+                    <div class="row epik">
+                        <div class="col-1"><span aria-hidden="true" class="far fa-clock"></span></div>
+                        <div class="col-11"><strong>Work Hours: </strong><br />Monday to Friday: 09:00-17:00</div>
+                    </div>
+                    
+                </div>
+                <!-- Grid column -->
+          
+                <hr class="clearfix w-100 d-md-none pb-3">
+                
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+          
+                  <!-- Links -->
+                  <h5>Useful Links</h5>
+          
+                  <ul class="list-unstyled" id="useful_links">
+                    <li>
+                        <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a>
+                    </li>
+                    <li>
+                    <a href="https://www.w3schools.com/" target="_blank">W3 Schools</a>
+                    </li>
+                    <li>
+                        <a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a>
+                    </li>
+                    <li>
+                        <a href="https://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validation Tool</a>
+                    </li> 
+                    <li>
+                        <a href="https://validator.w3.org/" target="_blank">W3C HTML Validation Tool</a>
+                    </li> 
+                    <li>
+                      <a href="https://wave.webaim.org/" target="_blank">Wave-Web Accessibility Evaluation Tool</a>
+                    </li>                
+                  </ul>
+          
+                </div>
+                <!-- Grid column -->
+          
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+          
+                  <!-- Links -->
+                  <h5>Social Media</h5>
+          
+                  <ul class="list-unstyled socialMedia">
+                    <li>
+                        <a href="#" aria-label="facebook" target="_blank" onclick="return false;">
+                            <span class="fab fa-facebook-f faSocial" title="Facebook"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="twitter" target="_blank" onclick="return false;">
+                            <span class="fab fa-twitter faSocial" title="Twitter"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="instagram" target="_blank" onclick="return false;">
+                            <span class="fab fa-instagram faSocial" title="Instagram"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="linkedin" target="_blank" onclick="return false;">
+                         <span class="fab fa-linkedin-in" title="Linkedin"></span>
+                        </a>
+                    </li>
+                    <li>
+                         <a href="#" aria-label="youtube" target="_blank" onclick="return false;">
+                            <span class="fab fa-youtube" title="Linkedin"></span>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- Grid column -->
+          
+              </div>
+              <!-- Grid row -->
+          
+            </div>
+            <!-- Footer Links -->
+          
+            <!-- Copyright -->
+            <div class="footer-copyright text-center"> 
+              
+                © 2021 My Brand Name - All rights reserved<br>
+                <span id="designerCopyright">Designed by:
+                <a href="#">
+                  <img src="../../assets/images/logo_light.png" alt="Light logo"> My Brand Name <img src="../../assets/images/logo_light.png" alt="Light logo">
+                </a>
+              </span>
+            </div>
+            <!-- Copyright -->
+          
+        </footer>
+    </div>
+    <script src="../../assets/js/custom_scripts.js"></script>
+</body>
+</html>
