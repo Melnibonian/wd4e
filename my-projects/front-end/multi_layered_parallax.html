@@ -13,126 +13,136 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="../../assets/libraries/bootstrap/js/bootstrap.js"></script>
             
-    <title>Neon Text Revealed</title>
+    <title>Multi Layered Parallax</title>
 
     <style>
         main.main_content {
-            background-color: #000000;
+            margin-top: 0;
+            padding-top: 0;
+            background-color: rgb(0, 0, 0);
+            background: linear-gradient( rgb( 0, 0, 0) 0%, rgb(242, 242, 242) 100%);
         }
-        .box {
+        .parallaxMain .col-12 {
+            background-color: rgba(0,0,0,0.6);
+            margin-top: 70px;
+            z-index: 4;
+        }
+    /* Parallax START */
+        .parallaxMain {
+            width: 100%;
+            height: 100vh;
             position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40vw;
-            height: 20vw;
-        
+            overflow: hidden;
+            background-image: url('../../assets/images/my-projects/front-end/parallax/sky.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center bottom;
         }
-        .box h2 {
-            color: #ffffff;
-            font-size: 5.8vw;
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-shadow:
-                        0 0 0.25vw #00ff00, 
-                        0 0 0.5vw #00ff00, 
-                        0 0 0.75vw #00ff00;
-            transition: all 2s ease;
-        }
-        .box h2:hover {
-            text-shadow:
-                        0 0 0.25vw #00ccff, 
-                        0 0 0.5vw #00ccff, 
-                        0 0 0.75vw #00ccff;
-        }
-        .lightbar {
+        #mountain {
             position: absolute;
-            top: calc(50% - 4vw);
-            left: 0;
-            width: 1vw;
-            height: 7vw;
-            border-radius: 10px;
-            background: #ffffff;
-            z-index: 2;
-            box-shadow:
-                        0 0 0.25vw #00ff00, 
-                        0 0 0.5vw #00ff00, 
-                        0 0 1vw #00ff00, 
-                        0 0 2vw #00ff00;
-            transition: all 2s ease;
-            animation: lightbarAnimated 5s linear infinite;
-        }
-        h2:hover ~ .lightbar {
-            box-shadow:
-                        0 0 0.25vw #00ccff, 
-                        0 0 0.5vw #00ccff, 
-                        0 0 1vw #00ccff, 
-                        0 0 2vw #00ccff;;
-        }
-        .toplayer {
-            position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: #000000;
-            animation: toplayerAnimated 10s linear infinite;
+            object-fit: cover;
+            z-index: 2;
         }
-        @keyframes lightbarAnimated{
-                0%, 5%
-                {
-                    transform: scaleY(0) translateX(0);
-                }
-                10%
-                {
-                    transform: scaleY(1) translateX(0);
-                }
-                90%
-                {
-                    transform: scaleY(1) translateX(40vw);
-                }
-                95%, 100%
-                {
-                    transform: scaleY(0) translateX(40vw);
-                }		
+        #hill {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80vw;
+            object-fit: contain;
+            z-index: 3;
         }
-        
-        @keyframes toplayerAnimated {
-                0%, 2.5%
-                {
-                    transform: translateX(0);
-                }
-                5%
-                {
-                    transform: translateX(0);
-                }
-                45%
-                {
-                    transform: translateX(100%);
-                }
-                47.5%, 50%
-                {
-                    transform: translateX(100%);
-                }
-                50.001%, 52.5%
-                {
-                    transform: translateX(-100%);
-                }
-                55%
-                {
-                    transform: translateX(-100%);
-                }
-                95%
-                {
-                    transform: translateX(0);
-                }
-                97.5%, 100%
-                {
-                    transform: translateX(0);
-                }
+        #keimeno {
+            position: relative;
+            color: rgb(255,215,255);
+            text-shadow: 0 0 0.05em black, 0.05em 0.05em 0.01em black;
+            font-size: 3em;
+            margin-top: calc(50vh - 125px);
+            text-align: center;
+            font-family: Broadway;
+            z-index: 7;
         }
-        
-        </style>
+        #sisyphusPhoto {
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 80vw;
+            object-fit: contain;
+            z-index: 4;
+        }
+        #moon {
+            width: 100px;
+            position: absolute;
+            top: 40vh;
+            left: 0;
+            object-fit: contain;
+            z-index: 1;
+        }
+        #meteor1, #meteor2, #meteor3, #meteor4 {
+            width: 70px;
+            position: absolute;
+            object-fit: contain;
+            z-index: 1;
+        }
+        #meteor1 {
+            top: 0;
+            left: 87px;
+        }
+        #meteor2 {
+            top: 4vh;
+            left: 80px;
+        }
+        #meteor3 {
+            top: 9vh;
+            left: 71px;	
+        }
+        #meteor4 {
+            top: 12vh;
+            left: 95px;	
+        }
+        #birds {
+            width: 200px;
+            position: absolute;
+            bottom: 15vw;
+            left: 0;
+            object-fit: contain;
+            z-index: 5;
+        }
+        #tree {
+            width: 20vw;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            object-fit: contain;
+            opacity: 0;
+            z-index: 6;
+        }
+        #easterEgg {
+        cursor: grab;
+        user-select: none;	
+        }
+        #easterEgg:active {
+        cursor: grabbing;	
+        }
+    /* Parallax END*/
+    /* @media START*/
+        @media screen and (max-width: 992px) {
+            #keimeno {
+            font-size: 2em;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            #keimeno {
+            font-size: 1.7em;
+            }
+        }
+    /* @media END*/
+    </style>
 </head>
 <body class="front_end_project_page">
 
@@ -167,20 +177,34 @@
                 </ul>
             </div>
         </nav>
-        <main class="main_content">
+        <section class="parallaxMain">
             <div class="col-12">
-                <h1 class="h4 text-center text-white">Neon Text Revealed</h1>
-                <p class="text-light text-center pb-3 custom_subtitle_light">Pure CSS animations &amp; hover effects
-                    <small>(Fully responsive, using fluid measurements and flexbox)</small>
+                <h1 class="h4 text-center text-white">Multi Layered Parallax</h1>
+                <p class="text-light text-center pb-3 custom_subtitle_light">Custom vanilla JavaScript fully responsive 
+                    parallax effect, just scroll down
+                    <small>(Layered section, containing carefully placed images and custom 
+                        calculated effects triggered by Javascript). <br />Don't forget to double click on the "Myth of Sisyphus" 
+                        text right below for a small easter egg.
+                    </small>
                 </p>
             </div>
+            <img src="../../assets/images/my-projects/front-end/parallax/mountain.png" id="mountain" alt="mountain">
+            <img src="../../assets/images/my-projects/front-end/parallax/hill.png" id="hill" alt="hill">
+            <img src="../../assets/images/my-projects/front-end/parallax/sisyphus.png" id="sisyphusPhoto" alt="sisyphusPhoto">
+            <img src="../../assets/images/my-projects/front-end/parallax/birds.png" id="birds" alt="birds">
+            <img src="../../assets/images/my-projects/front-end/parallax/moon.png" id="moon" alt="moon">
+            <img src="../../assets/images/my-projects/front-end/parallax/tree.png" id="tree" alt="tree">
+            <img src="../../assets/images/my-projects/front-end/parallax/meteor.png" id="meteor1" alt="meteor1">
+            <img src="../../assets/images/my-projects/front-end/parallax/meteor.png" id="meteor2" alt="meteor2">
+            <img src="../../assets/images/my-projects/front-end/parallax/meteor.png" id="meteor3" alt="meteor3">
+            <img src="../../assets/images/my-projects/front-end/parallax/meteor.png" id="meteor4" alt="meteor4">
+            <h4 id="keimeno"><span id="easterEgg" title="Double click to see a tiny easter egg. 
+            Single click to revert." data-toggle="tooltip">Myth of Sisyphus</span></h4>
+        </section>
+        <main class="main_content">
             <div class="row p-0 m-0 justify-content-center align-items-center">
-                <div class="box">
-                    <h2>Some Text</h2>
-                    <div class="lightbar"></div>
-                    <div class="toplayer"></div>
-                </div>
-            </div>            
+                
+            </div>
         </main>
         <footer class="page_footer font-small dark pt-4 ">
 
@@ -317,6 +341,53 @@
           
         </footer>
     </div>
+    <script src="../../assets/js/custom_scripts.js"></script>
+    <!-- Parallax -->
+    <script>
+        if ( document.getElementById("sisyphusPhoto") !== null) {
+            let sisyphusPhoto=document.getElementById("sisyphusPhoto");
+            let moon=document.getElementById("moon");
+            let mountain=document.getElementById("mountain");
+            let birds=document.getElementById("birds");
+            let meteor1=document.getElementById("meteor1");
+            let meteor2=document.getElementById("meteor2");
+            let meteor3=document.getElementById("meteor3");
+            let meteor4=document.getElementById("meteor4");
+            let keimeno=document.getElementById("keimeno");
+            let keimeno_height = keimeno.offsetHeight;
+            
+            window.addEventListener('scroll', function(){
+                var value = window.pageYOffset;
+                
+                sisyphusPhoto.style.transform = `translateX(${value * 0.3}px) translateY(${value * -0.17}px)`;
+                moon.style.transform = `translateX(${value * 0.4}px) translateY(${value * 0.1}px)`;
+                birds.style.transform = `translateX(${value * 0.5}px) translateY(${value * 0.05}px)`;
+                mountain.style.transform = `translateY(${value * 0.5}px)`;
+                meteor1.style.transform = `translateY(${value * 0.9}px)`;
+                meteor2.style.transform = `translateY(${value * 0.7}px)`;
+                meteor3.style.transform = `translateY(${value * 0.8}px)`;
+                meteor4.style.transform = `translateY(${value * 0.9}px)`;
+                keimeno.style.transform = `translateY(${value * 0.8}px)`;
+                keimeno.style.opacity = - value / (8*keimeno_height / 1.001) + 1;	
+                keimeno.style.color = 'rgb('+255+','+215+','+255*(- value / (6*keimeno_height / 1.001) + 1)+')';
+            })
+        }
+    </script>
+    <!-- Easter Egg -->
+    <script>
+        if ( document.getElementById("easterEgg") !== null && document.getElementById("tree") !== null) {
+            document.getElementById("easterEgg").ondblclick = function() {mouseOver()};
+            document.getElementById("easterEgg").onclick = function() {mouseOut()};
 
+            function mouseOver() {
+                document.getElementById("tree").style.opacity = "1";
+                document.getElementById("tree").style.transition = 'opacity 8s ease';
+            }
+
+            function mouseOut() {
+                document.getElementById("tree").style.opacity = "0";
+            }
+        }
+    </script>
 </body>
 </html>

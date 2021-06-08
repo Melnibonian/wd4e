@@ -130,7 +130,7 @@ if (document.getElementById("contact_form") !== null ){
 			/* setTimeout(function(){ 
 				document.getElementById['success_message'].innerHTML = 'Your message has been sent successfully!';
 			}, 3000); */
-			alert('Your message has been sent successfully!');
+			alert("This is just a test contact form. Your message hasn't been sent, since github doesn't give access to server side programming!");
 		}
 	}
 }

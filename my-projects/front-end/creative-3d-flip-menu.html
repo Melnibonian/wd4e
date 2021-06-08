@@ -15,7 +15,7 @@
             
     <title>Creative 3D Flip Menu</title>
 
-    <style type="text/css">
+    <style>
         body {
             background: #0b0c0e;
         } 
@@ -155,8 +155,12 @@
                 padding-top: 10px;
             }
             main.main_content .col-12 {
-            padding-left: 95px;
-            margin-top: 0;
+                padding-left: 95px;
+                margin-top: 0;
+            }
+            .navbar3D .dropdown-content {
+            top: 0;
+            left: 90px;
             }
         }
         main.main_content .col-12 {
@@ -190,6 +194,24 @@
 
             }
 /* 3D Support Clause  END */
+.navbar3D .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.navbar3D .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(0,0,0,0.9);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 16px 16px;
+  z-index: 1;
+}
+
+.navbar3D .dropdown:hover .dropdown-content {
+  display: block;
+}
     </style>
 </head>
 <body class="front_end_project_page">
@@ -214,7 +236,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown">My Projects</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item active" href="../front-end.html">Front End Web Development</a>
+                                <a class="dropdown-item active" href="../front-end.html">Front End Web Design</a>
                                 <a class="dropdown-item" href="../back-end.html">Back End Web Development</a>
                                 <a class="dropdown-item" href="../UX-design.html">UX Design</a>
                             </div>
@@ -236,36 +258,43 @@
                 </p>
             </div>
             <div class="row p-0 m-0 justify-content-center align-items-center">
-                <div class="navbar3D"><video src="../../assets/videos/flower.mp4" autoplay="" muted="" loop="loop"></video>
+                <div class="navbar3D"><video src="../../assets/videos/flower.mp4" autoplay muted loop controls></video>
                     <div class="koumpia">
-                        <a href="#"><div class="koumpi3D">
+                        <a href="../../index.html"><div class="koumpi3D">
                             <div class="side default-side">Home</div>
                             <div class="side hover-side"><span class="fas fa-home"></span></div>
                         </div></a>
                     
-                        <a href="#"><div class="koumpi3D">
-                            <div class="side default-side">About Us</div>
+                        <a href="../../about-me.html"><div class="koumpi3D">
+                            <div class="side default-side">About Me</div>
                             <div class="side hover-side"><span class="fas fa-users"></span></div>
                         </div></a>
                     
-                        <a href="#"><div class="koumpi3D">
-                            <div class="side default-side">Work Samples</div>
-                            <div class="side hover-side"><span class="fas fa-palette"></span></div>
+                        <div class="dropdown">
+                            <a href="#"><div class="koumpi3D">
+                                <div class="side default-side">My Projects</div>
+                                <div class="side hover-side"><span class="fas fa-palette"></span></div>
+                            </div></a>
+                            <div class="dropdown-content">
+                                <a class="dropdown-item" href="../front-end.html">Front End Web Design</a>
+                                <a class="dropdown-item" href="../back-end.html">Back End Web Development</a>
+                                <a class="dropdown-item" href="../UX-design.html">UX Design</a>
+                            </div>
+                        </div>
+
+                        <a href="../../contact.html"><div class="koumpi3D">
+                            <div class="side default-side">Contact</div>
+                            <div class="side hover-side"><span class="fas fa-broadcast-tower"></span></div>
                         </div></a>
-                    
+
                         <a href="#"><div class="koumpi3D">
                             <div class="side default-side">Blog</div>
                             <div class="side hover-side"><span class="fas fa-blog"></span></div>
                         </div></a>
                     
                         <a href="#"><div class="koumpi3D">
-                            <div class="side default-side">Contact</div>
-                            <div class="side hover-side"><span class="fas fa-broadcast-tower"></span></div>
-                        </div></a>
-                    
-                        <a href="#"><div class="koumpi3D">
                             <div class="side default-side">Video</div>
-                            <div class="side hover-side"><video src="../../assets/videos/flower.mp4" autoplay="" muted="" loop="loop"></video></div>
+                            <div class="side hover-side"><video src="../../assets/videos/flower.mp4" autoplay muted loop controls></video></div>
                         </div></a>
                     </div>
                 </div>
@@ -283,7 +312,7 @@
                     <h5>My Brand Name</h5>
                     <ul class="list-unstyled">
                         <li><a href="../front-end.html">Front End Web Design</a></li>
-                        <li><a href="../back-end.html">Back End Web Design</a></li>
+                        <li><a href="../back-end.html">Back End Web Development</a></li>
                         <li><a href="../UX-design.html">UX Design</a></li>                       
                     </ul>
                     <img src="../../assets/images/logo_light.png" alt="Light logo" >

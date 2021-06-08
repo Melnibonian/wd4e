@@ -18,8 +18,14 @@ html {
 	box-sizing: border-box;
 	max-width: 100vw;
 }
-a, a:hover {
+a {
 	text-decoration: none;
+	color: #0063cc;
+	transition: 0.5s ease;
+}
+a:hover {
+	text-decoration: none;
+	color: #ff0000;
 }
 body {
 	background-color: var(--light);
@@ -30,8 +36,11 @@ body {
 } 
 
 /* Main Menu START*/
-.navbar.navbar-expand-md.bg-dark.navbar-dark.menou {
+.navbar.navbar-expand-md.bg-dark.navbar-dark.menou, .navbar.navbar-expand-md.bg-dark.navbar-dark.menou .dropdown-menu {
 	background-color: var(--theme_color) !important;
+}
+.dropdown-item {
+	color: rgba(255, 255, 255, 0.5);
 }
 .menou { 
 	padding: 0px 5px;
@@ -468,16 +477,25 @@ svg.waves {
 	padding: 0;
 }
 #front_end_projects_page .row.projects .row #project1 {
-	background-image: url('../images/my-projects/front-end/interactive_neon_cards.jpg');
-}
-#front_end_projects_page .row.projects .row #project2 {
-	background-image: url('../images/my-projects/front-end/neonText.jpg');
+	background-image: url('../images/my-projects/front-end/multi_layered_parallax_effect.jpg');
 }
 #front_end_projects_page .row.projects .row #project3 {
-	background-image: url('../images/my-projects/front-end/glowing_buttons.jpg');
+	background-image: url('../images/my-projects/front-end/creative_3d_flip_menu.jpg');
+}
+#front_end_projects_page .row.projects .row #project7 {
+	background-image: url('../images/my-projects/front-end/interactive_neon_cards.jpg');
 }
 #front_end_projects_page .row.projects .row #project4 {
-	background-image: url('../images/my-projects/front-end/creative_3d_flip_menu.jpg');
+	background-image: url('../images/my-projects/front-end/neonText.jpg');
+}
+#front_end_projects_page .row.projects .row #project5 {
+	background-image: url('../images/my-projects/front-end/flashing_neon_text.jpg');
+}
+#front_end_projects_page .row.projects .row #project6 {
+	background-image: url('../images/my-projects/front-end/glowing_buttons.jpg');
+}
+#front_end_projects_page .row.projects .row #project2 {
+	background-image: url('../images/my-projects/front-end/polygon-3d-animation.jpg');
 }
 #front_end_projects_page .row.projects .row .projects_description {
 	display: flex;
@@ -488,10 +506,11 @@ svg.waves {
 	z-index: 100;
 	background-color: rgb(26, 26, 26);
 	color: rgb(255,255,255);
+	filter: invert(100%);
 	transition: all 1s ease;
 }
 #front_end_projects_page .row.projects .row:hover .projects_description {
-	filter: invert(100%);
+	filter: invert(0%);
 }
 @supports (mix-blend-mode: difference){
 	#front_end_projects_page .row.projects .row .projects_description:after {
@@ -766,6 +785,10 @@ footer.page_footer h5 {
 	}
 	#main_parallax a span {
 		font-size: 0.3em;
+	}
+	#front_end_projects_page .row.projects .col-lg-6 {
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 @media (min-width: 775px) and (max-width: 1024px) {
