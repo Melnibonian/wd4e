@@ -324,7 +324,7 @@ svg.waves {
 		background-position: center;
 		min-height: calc(100vh - 70px);
 	}
-	#about_me_page img#emp {
+	#about_me_page img.emp, #about_me_page img#forth {
 		float: left;
 		margin-right: 1em;
 		height: 3em;
