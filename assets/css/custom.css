@@ -1027,3 +1027,7 @@ footer.page_footer h5 {
 	}
 }
 /* Keyframe Animations END */
+/* Various accessibility issues */
+.form-control {
+	color: #000000;
+}
