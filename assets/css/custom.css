@@ -481,14 +481,14 @@ svg.waves {
 #front_end_projects_page .row.projects .row #project1 {
 	background-image: url('../images/my-projects/front-end/multi_layered_parallax_effect.jpg');
 }
-#front_end_projects_page .row.projects .row #project3 {
-	background-image: url('../images/my-projects/front-end/creative_3d_flip_menu.jpg');
+#front_end_projects_page .row.projects .row #project2 {
+	background-image: url('../images/my-projects/front-end/polygon-3d-animation.jpg');
 }
-#front_end_projects_page .row.projects .row #project7 {
-	background-image: url('../images/my-projects/front-end/interactive_neon_cards.jpg');
+#front_end_projects_page .row.projects .row #project3 {
+	background-image: url('../images/my-projects/front-end/circular-wave-3D-animation.jpg');
 }
 #front_end_projects_page .row.projects .row #project4 {
-	background-image: url('../images/my-projects/front-end/neonText.jpg');
+	background-image: url('../images/my-projects/front-end/creative_3d_flip_menu.jpg');
 }
 #front_end_projects_page .row.projects .row #project5 {
 	background-image: url('../images/my-projects/front-end/flashing_neon_text.jpg');
@@ -496,8 +496,11 @@ svg.waves {
 #front_end_projects_page .row.projects .row #project6 {
 	background-image: url('../images/my-projects/front-end/glowing_buttons.jpg');
 }
-#front_end_projects_page .row.projects .row #project2 {
-	background-image: url('../images/my-projects/front-end/polygon-3d-animation.jpg');
+#front_end_projects_page .row.projects .row #project7 {
+	background-image: url('../images/my-projects/front-end/interactive_neon_cards.jpg');
+}
+#front_end_projects_page .row.projects .row #project8 {
+	background-image: url('../images/my-projects/front-end/neonText.jpg');
 }
 #front_end_projects_page .row.projects .row .projects_description {
 	display: flex;
@@ -675,6 +678,10 @@ svg.waves {
 }
 #contact_page .social_media_container ul.socialMedia .fab {
 	font-size: 40px;
+}
+#contact_page .social_media_container ul.socialMedia li:hover .fab {
+	width: 8em;
+	border-radius: 5px;
 }
 .position_top_left {
 	position: absolute;
