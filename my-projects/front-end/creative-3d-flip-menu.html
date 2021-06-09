@@ -198,7 +198,6 @@
   position: relative;
   display: inline-block;
 }
-
 .navbar3D .dropdown-content {
   display: none;
   position: absolute;
@@ -208,9 +207,10 @@
   padding: 16px 16px;
   z-index: 1;
 }
-
-.navbar3D .dropdown:hover .dropdown-content {
-  display: block;
+@media(min-width: 601px){
+    .navbar3D .dropdown:hover .dropdown-content {
+    display: block;
+    }
 }
     </style>
 </head>
@@ -436,5 +436,12 @@
         </footer>
     </div>
     <script src="../../assets/js/custom_scripts.js"></script>
+    <script>
+        if ($(window).width() <=600 ) {
+            $(".navbar3D .dropdown").click(function(){
+            $(".navbar3D .dropdown .dropdown-content").fadeToggle();
+        });
+        }
+    </script>
 </body>
 </html>
