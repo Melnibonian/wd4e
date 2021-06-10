@@ -33,6 +33,7 @@
             height: 100vh;
             position: relative;
             overflow: hidden;
+            background-color: rgb(0, 0, 0);
             background-image: url('../../assets/images/my-projects/front-end/parallax/sky.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -58,8 +59,8 @@
         }
         #keimeno {
             position: relative;
-            color: rgb(255,215,255);
-            text-shadow: 0 0 0.05em black, 0.05em 0.05em 0.01em black;
+            color: rgb(255,255,255);
+            text-shadow: 0 0 0.05em #000000, 0.05em 0.05em 0.01em #000000;
             font-size: 3em;
             margin-top: calc(50vh - 125px);
             text-align: center;
@@ -288,38 +289,50 @@
                 <!-- Grid column -->
                 <div class="col-md-3 mb-md-0 mb-3">
           
-                  <!-- Links -->
-                  <h5>Social Media</h5>
-          
-                  <ul class="list-unstyled socialMedia">
-                    <li>
-                        <a href="#" aria-label="facebook" target="_blank" onclick="return false;">
-                            <span class="fab fa-facebook-f faSocial" title="Facebook"></span>
+                    <!-- Links -->
+                    <h5>Social Media</h5>
+            
+                    <ul class="list-unstyled socialMedia mb-0">
+                        <li>
+                            <a href="#" aria-label="facebook" target="_blank" onclick="return false;">
+                                <span class="fab fa-facebook-f faSocial" title="Facebook"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="twitter" target="_blank" onclick="return false;">
+                                <span class="fab fa-twitter faSocial" title="Twitter"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="instagram" target="_blank" onclick="return false;">
+                                <div class="instagram_icon">
+                                    <img src="../../assets/images/instagram.png" alt="instagram">
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="linkedin" target="_blank" onclick="return false;">
+                            <span class="fab fa-linkedin-in" title="Linkedin"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="youtube" target="_blank" onclick="return false;">
+                                <span class="fab fa-youtube" title="Linkedin"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="validations p-1">
+                        <h5 class="pt-0 mt-0">Validations</h5>
+                        <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmelnibonian.github.io%2Fwd4e%2Fmy-projects%2Ffront-end/multi_layered_parallax.html" target="_blank" title="HTML Validation">
+                            <img src="../../assets/images/validations/w3c_html.png" alt="HTML Validation">
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" aria-label="twitter" target="_blank" onclick="return false;">
-                            <span class="fab fa-twitter faSocial" title="Twitter"></span>
+                        <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmelnibonian.github.io%2Fwd4e%2Fmy-projects%2Ffront-end/multi_layered_parallax.html" target="_blank" title="CSS Validation">
+                            <img src="../../assets/images/validations/w3c_css.png" alt="CSS Validation">
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" aria-label="instagram" target="_blank" onclick="return false;">
-                            <div id="instagram_icon">
-                                <img src="../../assets/images/instagram.png" alt="instagram">
-                            </div>
+                        <a href="https://wave.webaim.org/report#/https://melnibonian.github.io/wd4e/my-projects/front-end/multi_layered_parallax.html" target="_blank" title="Accessibility Validation">
+                            <img class="bg-light pl-1 pr-1" src="../../assets/images/validations/wavelogo.png" alt="Accessibility Validation">
                         </a>
-                    </li>
-                    <li>
-                        <a href="#" aria-label="linkedin" target="_blank" onclick="return false;">
-                         <span class="fab fa-linkedin-in" title="Linkedin"></span>
-                        </a>
-                    </li>
-                    <li>
-                         <a href="#" aria-label="youtube" target="_blank" onclick="return false;">
-                            <span class="fab fa-youtube" title="Linkedin"></span>
-                        </a>
-                    </li>
-                  </ul>
+                    </div>
                 </div>
                 <!-- Grid column -->
           
@@ -371,7 +384,7 @@
                 meteor4.style.transform = `translateY(${value * 0.9}px)`;
                 keimeno.style.transform = `translateY(${value * 0.8}px)`;
                 keimeno.style.opacity = - value / (8*keimeno_height / 1.001) + 1;	
-                keimeno.style.color = 'rgb('+255+','+215+','+255*(- value / (6*keimeno_height / 1.001) + 1)+')';
+                keimeno.style.color = 'rgb('+255+','+255+','+255*(- value / (6*keimeno_height / 1.001) + 1)+')';
             })
         }
     </script>
