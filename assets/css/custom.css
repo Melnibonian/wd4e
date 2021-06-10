@@ -357,7 +357,7 @@ svg.waves {
 	}
 	.certification_container {
 		min-height: 100vh;
-		border-top: 3px solid #cccccc;
+		border-top: 1px solid #666666;
 		background-color: #ffffff;
 	}
 	.certification_container .col-md-6.col-lg-3 {
@@ -394,6 +394,9 @@ svg.waves {
 	.certification_container .certification_box.michigan {
 		background-image: url("../images/certificates/certificate_michigan.jpg");
 	}
+	.certification_container .certification_box.michigan_specialization {
+		background-image: url("../images/certificates/specialization_michigan.jpg");
+	}
 	.certification_container .certification_box.michigan_spec {
 		background-image: url("../images/certificates/specialization_michigan.jpg");
 	}
@@ -426,6 +429,51 @@ svg.waves {
 	#portfoliolist .portfolio {
 		display:none;
 		overflow:hidden;
+	}
+	.education_quick_list {
+		margin-left: 2em;
+	}
+	.education_quick_list ul {
+		list-style-type: none;
+	}
+	.education_quick_list ul li {
+		margin-bottom: 0.5em;
+		transition: all 1s ease;
+	}
+	.education_quick_list ul li:before {
+		content: '';
+		display: inline-block;
+		height: 2em;
+		width: 2em;
+		margin-right: 5px;
+		vertical-align: middle;
+		transition: all 1s ease;
+	}
+	.education_quick_list ul li.front-end:before {
+		background: url('../images/front_end_icon.png') no-repeat;
+		background-size: contain;
+	}
+	.education_quick_list ul li.back-end:before {
+		background: url('../images/back_end_icon.png') no-repeat;
+		background-size: contain;
+	}
+	.education_quick_list ul li.ux-design:before {
+		background: url('../images/ux_icon.png') no-repeat;
+		background-size: contain;
+	}
+	.education_quick_list ul li.covid-icon:before {
+		background: url('../images/covid_icon.png') no-repeat;
+		background-size: contain;
+	}
+	.education_quick_list ul li.custom_unstyled:before {
+		opacity: 0;
+	}
+	.education_quick_list ul li:hover {
+		color: #993300;
+	}
+	.education_quick_list ul li:hover:before {
+		opacity: 0.6;
+		/* transform: rotate(360deg); */
 	}
 /* About Me END */
 /* Front End Page START */
@@ -676,10 +724,10 @@ svg.waves {
     margin-right: 0;
     margin-bottom: 2em;
 }
-#contact_page .social_media_container ul.socialMedia .fab {
+#contact_page .social_media_container ul.socialMedia .fab, #contact_page .social_media_container ul.socialMedia #instagram_icon {
 	font-size: 40px;
 }
-#contact_page .social_media_container ul.socialMedia li:hover .fab {
+#contact_page .social_media_container ul.socialMedia li:hover .fab, #contact_page .social_media_container ul.socialMedia li:hover #instagram_icon {
 	width: 8em;
 	border-radius: 5px;
 }
@@ -798,20 +846,6 @@ footer.page_footer h5 {
 	text-align: center;
 	padding-top: 0.5em;
 }
-.socialMedia2 li {
-	display: inline-block;
-	margin-right: 0.3em;
-	margin-bottom: 0.3em;
-}
-.socialMedia2 .fab {
-	font-size: 20px;
-	width: 42px;
-	height: 42px;
-	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-	border: 3px solid rgba(255, 215, 0, 0.5);
-	text-align: center;
-	padding-top: 8px;
-}
 .fa-facebook-f {
 	color: #3B5998;
 	box-shadow: inset 0 0 10px #3B5998;
@@ -822,14 +856,30 @@ footer.page_footer h5 {
 	box-shadow: inset 0 0 10px #55ACEE;
 	transition: 0.5s ease;
 }
-.fa-instagram {
+/* .fa-instagram {
 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 	background-clip: text;
-/* Standard property for compatibility */
+Standard property for compatibility
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	box-shadow: inset 0 0 10px #f09433;
 	transition: 0.5s ease;
+} */
+.socialMedia #instagram_icon {
+	position: relative;
+	bottom: 0.25em;
+	font-size: 20px;
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	box-shadow: inset 0 0 10px #f09433;
+	transition: 0.5s ease;
+}
+.socialMedia #instagram_icon img {
+	width: 1em;
+	height: auto;
+	margin-left: calc(50% - 0.5em);
+	padding-top: 0.25em;
 }
 .fa-linkedin-in {
 	color: #2867b2;
@@ -852,7 +902,10 @@ footer.page_footer h5 {
 	background-color:transparent;
 	box-shadow: inset 0 0 10px #ffffff;
 }
-.fa-instagram:hover {
+/* .fa-instagram:hover {
+	box-shadow: inset 0 0 10px #ffffff;
+} */
+.socialMedia #instagram_icon:hover {
 	box-shadow: inset 0 0 10px #ffffff;
 }
 .fa-linkedin-in:hover {
