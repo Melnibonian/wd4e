@@ -1100,8 +1100,3 @@ Standard property for compatibility
 	}
 }
 /* Keyframe Animations END */
-/* Various accessibility issues */
-.form-control option{
-	color: #000000 !important;
-	background: #ffffff !important;
-}
