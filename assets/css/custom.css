@@ -746,6 +746,20 @@ svg.waves {
 	height: auto;
 }
 /* Contact Page END */
+/* Assignment Description Page START */
+#assignment_description_page {
+	background-image: url("../images/pattern_shapes.png");
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: bottom;
+ }
+ #assignment_description_page .border_block {
+	 border: 1px solid #cccccc;
+ }
+ #assignment_description_page .col-12 {
+	 border-top: 1px solid #ffffff;
+ }
+/* Assignment Description Page END */
 /* Footer START */
 footer.page_footer {
 	background-color: var(--theme_color); 
