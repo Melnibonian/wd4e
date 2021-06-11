@@ -250,6 +250,7 @@
         </nav>
         <main class="main_content">
             <div class="col-12">
+                <button id="close_icon" title="Close">x</button>
                 <h1 class="h4 text-center text-white">Creative 3D Flip Menu</h1>
                 <p class="text-light text-center pb-3 custom_subtitle_light">Pure CSS styling &amp; hover effects
                     <small>(Custom menu with pseudo-3D flipping effect on hover, hovering last menu item shows a video 
@@ -457,6 +458,9 @@
                 $(".navbar3D .dropdown .dropdown-content").fadeToggle();
             });
         }
+        $("#close_icon").click(function(e){
+            $(".main_content .col-12").fadeOut();
+        });
     </script>
 </body>
 </html>

@@ -1005,7 +1005,7 @@ Standard property for compatibility
 	footer.page_footer {
 		background-position: top;
 	}
-	footer.page_footer .fab, .socialMedia .instagram_icon {
+	footer.page_footer .fab, footer.page_footer .instagram_icon {
 		background-color :rgba(0,0,0,0.7);
 	}
 	.certification_container .certification_box {
@@ -1100,3 +1100,14 @@ Standard property for compatibility
 	}
 }
 /* Keyframe Animations END */
+#close_icon {
+	color: #ffffff;
+	position: absolute;
+	top: 0px;
+	right: 12px;
+	font-size: 1.3em;
+	background: none;
+	border: none;
+	cursor: pointer;
+	z-index: 10000;
+}
