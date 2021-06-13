@@ -57,10 +57,12 @@
             <figure></figure>
             <figure></figure>
             <figure></figure>
-            <div class="bg-white p-3">
+            <div class="description">
                 <h1 class="h4 text-center">User Experience Design</h1>
-                <p class="text-muted text-center custom_subtitle_dark">Still undergoing training in UX design, 
-                    so this page is under construction and will be updated soon</p>
+                <p class="text-muted text-center custom_subtitle_dark">
+                    Still undergoing training in UX design, so this page is under construction and will be updated soon<br />
+                    <a href="#" id="disable_animations" class="btn btn-primary mt-1">Click here to enable/disable all animations</a>
+                </p>
             </div>
             <img id="bulldozer" src="../assets/images/under_construction/under_construction_bulldozer.png" alt="Construction bulldozer">
             <img id="hook" src="../assets/images/under_construction/under_construction_hook.png" alt="Construction hook">
@@ -217,6 +219,12 @@
           
         </footer>
     </div>
-
+    <script src="../assets/js/custom_scripts.js"></script>
+    <script>
+        $("#disable_animations").click(function(event) {
+            event.preventDefault();
+            $(".main_content figure, .main_content img").toggle(2000);
+	    });
+    </script>
 </body>
 </html>

@@ -590,7 +590,11 @@ svg.waves {
 /* Project Pages END */
 /* Back End Page START */
 #back_end_projects_page {
-	background-color:#000000;
+	background-color:#3caea3;
+}
+#back_end_projects_page .description {
+	padding: 1em 1em 0.5em 1em;
+	background-color: rgba(255,255,255,0.8);
 }
 #back_end_projects_page figure {
 	padding: 0;
@@ -655,6 +659,7 @@ svg.waves {
 	position: absolute;
 	top: 70px;
 	right: 0;
+	transform-origin: 45% 0%;
 	animation: rotate_sign 8s infinite linear;
 	animation-delay: 4s;
 }
@@ -669,7 +674,11 @@ svg.waves {
 /* Back End Page END */
 /* UX Page START */
 #ux_projects_page {
-	background-color:#000000;
+	background-color:#3caea3;
+}
+#ux_projects_page .description {
+	padding: 1em 1em 0.5em 1em;
+	background-color: rgba(255,255,255,0.8);
 }
 #ux_projects_page figure {
 	padding: 0;
