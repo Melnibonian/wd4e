@@ -670,6 +670,7 @@ svg.waves {
 	top: -22.6vw;
 	right: 40vw;
 	animation: moving_hook 4s linear;
+	z-index: -1;
 }
 /* Back End Page END */
 /* UX Page START */
@@ -754,6 +755,7 @@ svg.waves {
 	top: -22.6vw;
 	right: 40vw;
 	animation: moving_hook 4s linear;
+	z-index: -1;
 }
 /* UX Page END */
 /* Contact Page START*/
