@@ -440,6 +440,9 @@ svg.waves {
 		margin-bottom: 0.5em;
 		transition: all 1s ease;
 	}
+	.education_quick_list ul li.sub_list {
+		padding-left: 1em;
+	}
 	.education_quick_list ul li:before {
 		content: '';
 		display: inline-block;
@@ -466,7 +469,10 @@ svg.waves {
 		background-size: contain;
 	}
 	.education_quick_list ul li.custom_unstyled:before {
-		opacity: 0;
+		display: none;
+	}
+	.education_quick_list ul li.custom_unstyled {
+		padding-left: 1em;
 	}
 	.education_quick_list ul li:hover {
 		color: #993300;
